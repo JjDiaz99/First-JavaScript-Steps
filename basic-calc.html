@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Basic Calculator</title>
+    </head>
+    <body>
+        <input 
+            id="first-number" 
+            placeholder="First number"
+            type="number"
+        />
+        <input 
+            id="second-number" 
+            placeholder="Second number"
+            type="number"
+        />
+        <button onclick="onClickSumButton()">+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+        <div>
+            <p>Result</p>
+            <span id="result">0,00</span>
+        </div>
+
+       <script>
+           //Aquí va código JS
+           
+        //    const variable = 1230;
+        //    alert('Hello world ' + variable);
+            const elementInputFirstNumber = document.getElementById('first-number');
+            const elementInputSecondNumber = document.getElementById('second-number');
+            const elementResult = document.getElementById('result');
+
+            // 
+            //alert('The sum of A and B is equal to ' + result);
+
+        //    function nombreFuncion(numA, numB, numC, numD){
+        //        DO SOMETHING
+        //    }
+            function sum(a, b){
+                return a + b;
+            }
+        
+            //Is the same
+            // const sum1 = 5 + 10; 
+            // const sum2 = sum(5, 10);
+
+            function onClickSumButton(){
+                const numA = Number(elementInputFirstNumber.value);
+                const numB = Number(elementInputSecondNumber.value);
+                const result = sum(numA, numB);
+                // debugger
+                elementResult.innerText=result;
+            }
+
+       </script> 
+
+    </body>
+</html>
